@@ -514,7 +514,19 @@ class WebcamCapture:
                     # Add shadows to the moon map
                     if moon_simulation:
                         moon_map.add_shadow(pic_name, pic_time, shadows)
-                    
+                        if shadow_count > 0:
+    		log(f"{shadow_count} shadows detected at: {shadow_details}", 'INFO')
+
+    if shadow_detection:
+        if shadow_count > 0:
+            dest_folder = "images/shadows_detected"
+    else:
+        dest_folder = "images/no_shadows"
+    os.makedirs(dest_folder, exist_ok=True)
+    src = os.path.join(self.image_folder, pic_name)
+    dst = os.path.join(dest_folder, pic_name)
+    shutil.move(src, dst)
+
                     if shadow_count > 0:
                         log(f"{shadow_count} shadows detected at: {shadow_details}", 'INFO')
                 
