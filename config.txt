@@ -1,0 +1,21 @@
+# Minimal config for Webcam program
+
+# 1 = simulation mode (fake moon generation), 0 = real camera
+simulation=0
+
+# 1 = use shake-trigger capture (IMU); 0 = continuous mission
+shake_detection=0
+
+# Trigger level for shake in m/s^2; effective only when shake_detection=1
+acceleration_threshold=10.0
+
+# Continuous mission settings (runs in webcam.py)
+wait_seconds=2
+num_pictures=5
+run_minutes=1
+
+# Moon/shadow operation
+moon_simulation=1
+shadow_detection=1
+shadow_threshold=120
+create_shadow_map=1
