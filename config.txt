@@ -11,7 +11,7 @@ acceleration_threshold=10.0
 
 # Continuous mission settings (runs in webcam.py)
 wait_seconds=2
-num_pictures=5
+num_pictures=20
 run_minutes=1
 
 # Moon/shadow operation
